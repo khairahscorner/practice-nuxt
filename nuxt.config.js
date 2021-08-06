@@ -1,4 +1,6 @@
-const config = require('./.contentful.json')
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -39,9 +41,9 @@ export default {
   pageTransition: 'page',
   
   env: {
-    CTF_SPACE_ID: config.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
-    CTF_TEAM_TYPE_ID: config.CTF_TEAM_TYPE_ID
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
+    CTF_TEAM_TYPE_ID: process.env.CTF_TEAM_TYPE_ID
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
